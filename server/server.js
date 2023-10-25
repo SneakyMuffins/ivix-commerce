@@ -2,10 +2,16 @@ const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const path = require('path');
 const { schema, root } = require('./routes/product');
+const cors = require('cors');
 
 const app = express();
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
+
+app.use(cors({
+  origin: '*', 
+  credentials: true,
+}));
 
 app.use(
   '/graphql',
