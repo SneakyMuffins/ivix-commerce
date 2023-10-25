@@ -1,0 +1,15 @@
+type Product {
+  id: String
+  name: String
+  brand: String
+  stock: Int
+  var: Int
+  price: Float
+  description: String
+  imageUrl: String
+}
+
+type Query {
+  products: [Product]
+  product(id: String): Product
+}
