@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { fetchProducts } from './api/services/product';
-import ProductList from './components/ProductList';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MiniDrawer from './components/Drawer/MiniDrawer';
+import ProductListPage from './routes/ProductListPage';
+import HomePage from './routes/HomePage';
+import { menuItems } from './config/menu';
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetchProducts()
-      .then((products) => {
-        setProducts(products);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-
   return (
-    <div className="App">
-      <ProductList products={products} />
+    <div className="app">
+      <BrowserRouter>
+        <div className="content">
+          <MiniDrawer menuItems={menuItems}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/productlist" element={<ProductListPage />} />
+            </Routes>
+          </MiniDrawer>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
