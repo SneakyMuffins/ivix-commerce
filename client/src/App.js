@@ -4,6 +4,7 @@ import MiniDrawer from './components/Drawer/MiniDrawer';
 import ProductListPage from './routes/ProductListPage';
 import HomePage from './routes/HomePage';
 import { menuItems } from './config/menu';
+import "./App.css";
 
 function App() {
   return (
