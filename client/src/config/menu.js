@@ -10,28 +10,32 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 
 export const menuItems = [
-    {
-      section: "MAIN",
-      items: [
-        { label: "Overview", icon: <DashboardOutlinedIcon /> },
-        { label: "Leaderboard", icon: <EqualizerOutlinedIcon /> },
-        { label: "Spreadsheets", icon: <TableChartOutlinedIcon /> },
-        {
-          label: "Sales",
-          icon: <MonetizationOnOutlinedIcon />,
-          subItems: [{ label: "Product List" }, { label: "Transaction History" }],
-        },
-        { label: "Administration", icon: <BusinessOutlinedIcon /> },
-        { label: "Schedule", icon: <EventOutlinedIcon /> },
-      ],
-    },
-    {
-      section: "OTHER",
-      items: [
-        { label: "Messages", icon: <MessageOutlinedIcon /> },
-        { label: "Library", icon: <LibraryBooksOutlinedIcon /> },
-        { label: "Settings", icon: <SettingsOutlinedIcon /> },
-        { label: "Support", icon: <PhoneInTalkOutlinedIcon /> },
-      ],
-    },
+  {
+    section: "MAIN",
+    items: [
+      { label: "Overview", icon: <DashboardOutlinedIcon />, route: "/" },
+      { label: "Leaderboard", icon: <EqualizerOutlinedIcon />, route: "/leaderboard" },
+      { label: "Spreadsheets", icon: <TableChartOutlinedIcon />, route: "/spreadsheets" },
+      {
+        label: "Sales",
+        icon: <MonetizationOnOutlinedIcon />,
+        route: "/sales",
+        subItems: [
+          { label: "Product List", route: "/sales/productlist" },
+          { label: "Transaction History", route: "/sales/transactionhistory" },
+        ],
+      },
+      { label: "Administration", icon: <BusinessOutlinedIcon />, route: "/administration" },
+      { label: "Schedule", icon: <EventOutlinedIcon />, route: "/schedule" },
+    ],
+  },
+  {
+    section: "OTHER",
+    items: [
+      { label: "Messages", icon: <MessageOutlinedIcon />, route: "/messages" },
+      { label: "Library", icon: <LibraryBooksOutlinedIcon />, route: "/library" },
+      { label: "Settings", icon: <SettingsOutlinedIcon />, route: "/settings" },
+      { label: "Support", icon: <PhoneInTalkOutlinedIcon />, route: "/support" },
+    ],
+  },
 ];

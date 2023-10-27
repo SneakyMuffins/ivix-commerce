@@ -27,9 +27,9 @@ const Header = () => {
         }}
       >
         <div className="search-bar" sx={{ mr: 2 }}>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <SearchOutlinedIcon color="action" />
-            <InputBase placeholder="Search..." />
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <SearchOutlinedIcon color="action"  />
+            <InputBase placeholder="Search..." sx={{fontSize: "14px"}} />
           </div>
         </div>
         <div

@@ -14,7 +14,7 @@ function App() {
           <MiniDrawer menuItems={menuItems}>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/productlist" element={<ProductListPage />} />
+              <Route path="/sales/productlist" element={<ProductListPage />} />
             </Routes>
           </MiniDrawer>
         </div>

@@ -1,11 +1,22 @@
+import { useNavigate } from "react-router-dom";
+
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import { useHighlightMenuItem } from "../../hooks/useHighlightMenuItem";
 
-const SidebarSubItem = ({ open, subItem }) => {
+const SidebarSubItem = ({ open, subItem, currentLocation }) => {
+  const isActive = useHighlightMenuItem(subItem, currentLocation);
+  const navigate = useNavigate();
+
+  const handleItemClick = () => {
+    if (subItem.route) {
+      navigate(subItem.route);
+    }
+  };
+
   return (
     <ListItem
-      key={subItem.label}
       disablePadding
       sx={{
         display: "block",
@@ -19,8 +30,16 @@ const SidebarSubItem = ({ open, subItem }) => {
           justifyContent: "initial",
           px: 2.5,
         }}
+        onClick={handleItemClick}
       >
-        <ListItemText primary={subItem.label} />
+        <ListItemText
+          primary={subItem.label}
+          primaryTypographyProps={{
+            color: isActive ? "primary" : "",
+            fontWeight: 500,
+            fontSize: "14px",
+          }}
+        />
       </ListItemButton>
     </ListItem>
   );
