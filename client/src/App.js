@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MiniDrawer from './components/Drawer/MiniDrawer';
+import MiniDrawer from './components/MiniDrawer/MiniDrawer';
 import ProductListPage from './routes/ProductListPage';
 import HomePage from './routes/HomePage';
 import { menuItems } from './config/menu';

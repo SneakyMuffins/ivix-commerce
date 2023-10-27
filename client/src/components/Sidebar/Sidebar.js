@@ -1,12 +1,12 @@
 import * as React from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
 
 import SidebarItem from "./SidebarItem";
-import Drawer from "../Drawer/styled/Drawer";
+import Drawer from "./styled/Drawer";
 
 const Sidebar = ({ open, menuItems }) => {
   const location = useLocation();
