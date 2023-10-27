@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ProductList from '../components/Product/ProductList';
+import ProductList from '../components/ProductList/ProductList';
 import { fetchProducts } from '../api/services/product';
 
 const ProductListPage = () => {
