@@ -15,14 +15,16 @@ import {
 const ProductListActions = ({ stockPercentage }) => {
   return (
     <ActionsContainer>
-      <SemiCircleProgressBar
-        percentage={stockPercentage}
-        strokeWidth={28}
-        diameter={170}
-        background="#F1F1F5"
-        stroke="#50B5FF"
-        showPercentValue
-      />
+      <Box sx={{ marginRight: "70px", marginBottom: "5px" }}>
+        <SemiCircleProgressBar
+          percentage={stockPercentage}
+          strokeWidth={28}
+          diameter={170}
+          background="#F1F1F5"
+          stroke="#50B5FF"
+          showPercentValue
+        />
+      </Box>
       <SortDropdown>
         <Box display="flex">
           <Typography sx={{ fontSize: "14px", color: "#696974" }}>
