@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import SemiCircleProgressBar from "react-progressbar-semicircle";
 
 import {
   ActionsContainer,
@@ -11,9 +12,17 @@ import {
   NewProductButton,
 } from "./styled/ProductListActions.styled";
 
-const ProductListActions = () => {
+const ProductListActions = ({ stockPercentage }) => {
   return (
     <ActionsContainer>
+      <SemiCircleProgressBar
+        percentage={stockPercentage}
+        strokeWidth={28}
+        diameter={170}
+        background="#F1F1F5"
+        stroke="#50B5FF"
+        showPercentValue
+      />
       <SortDropdown>
         <Box display="flex">
           <Typography sx={{ fontSize: "14px", color: "#696974" }}>

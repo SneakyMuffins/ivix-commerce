@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
@@ -11,6 +10,7 @@ import ProductListOptions from "./ProductListOptions";
 const ProductList = ({ products }) => {
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [stockPercentage, setStockPercentage] = useState(0);
 
   useEffect(() => {
     if (products && products.length > 0) {
@@ -18,6 +18,16 @@ const ProductList = ({ products }) => {
       setLoading(false);
     }
   }, [products]);
+
+  useEffect(() => {
+    if (!loading) {
+      const inStockProducts = productData.filter(
+        (product) => product.stock > 0
+      );
+      const percentage = (inStockProducts.length / productData.length) * 100;
+      setStockPercentage(percentage);
+    }
+  }, [productData, loading]);
 
   const renderActionsCell = (params) => (
     <ProductListOptions
@@ -56,7 +66,7 @@ const ProductList = ({ products }) => {
     <>
       <Box display="flex" justifyContent="space-between">
         <ProductListHeader />
-        <ProductListActions />
+        <ProductListActions stockPercentage={stockPercentage} />
       </Box>
       {loading ? (
         <Box
