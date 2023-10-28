@@ -21,8 +21,8 @@ export const menuItems = [
         icon: <MonetizationOnOutlinedIcon />,
         route: "/sales",
         subItems: [
-          { label: "Product List", route: "/sales/productlist" },
-          { label: "Transaction History", route: "/sales/transactionhistory" },
+          { label: "Product List", route: "/sales/productlist", indicator: "195" },
+          { label: "Transaction History", route: "/sales/transactionhistory", indicator: "8" },
         ],
       },
       { label: "Administration", icon: <BusinessOutlinedIcon />, route: "/administration" },

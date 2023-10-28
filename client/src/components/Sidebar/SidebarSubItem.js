@@ -40,6 +40,17 @@ const SidebarSubItem = ({ open, subItem, currentLocation }) => {
             fontSize: "14px",
           }}
         />
+        <ListItemText
+          sx={{ flex: "none" }}
+          primaryTypographyProps={{
+            color: "grey",
+            fontWeight: 500,
+            fontSize: "14px",
+            width: "min-content",
+          }}
+        >
+          {subItem.indicator}
+        </ListItemText>
       </ListItemButton>
     </ListItem>
   );

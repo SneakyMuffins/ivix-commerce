@@ -14,7 +14,7 @@ const Sidebar = ({ open, menuItems }) => {
   return (
     <Drawer variant="permanent" open={open}>
       <Divider sx={{ pt: "71px" }} />
-      <List>
+      <List sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         {menuItems.map((section) => (
           <React.Fragment key={section.section}>
             <ListSubheader
