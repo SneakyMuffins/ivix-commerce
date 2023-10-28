@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import SemiCircleProgressBar from "react-progressbar-semicircle";
-
+import { buttonClasses } from "@mui/material/Button";
 import {
   ActionsContainer,
   SortDropdown,
@@ -26,25 +26,37 @@ const ProductListActions = ({ stockPercentage }) => {
         />
       </Box>
       <SortDropdown>
-        <Box display="flex">
+        <Box display="flex" p="7px">
           <Typography sx={{ fontSize: "14px", color: "#696974" }}>
             Sort by:
           </Typography>
-          <Typography
-            sx={{ fontSize: "14px", color: "#44444F", fontWeight: "500" }}
-          >
-            Default
-          </Typography>
+          <Box sx={{ marginLeft: "4px" }}>
+            <Typography
+              sx={{ fontSize: "14px", color: "#44444F", fontWeight: "600" }}
+            >
+              Default
+            </Typography>
+          </Box>
         </Box>
-        <ArrowDropDownOutlinedIcon
-          sx={{ borderLeft: "1px solid rgba(0, 0, 0, 0.12)" }}
-          color="action"
-        />
+        <Box
+          display="flex"
+          sx={{
+            padding: "7px 2px",
+            borderLeft: "1px solid #F1F1F5",
+          }}
+        >
+          <ArrowDropDownOutlinedIcon color="action" />
+        </Box>
       </SortDropdown>
       <FilterButton />
       <NewProductButton
+        sx={{
+          [`& .${buttonClasses.startIcon} > *:nth-of-type(1)`]: {
+            fontSize: "24px",
+          },
+        }}
         variant="contained"
-        startIcon={<AddOutlinedIcon color="action" />}
+        startIcon={<AddOutlinedIcon sx={{ color: "#92929D" }} />}
       >
         New Product
       </NewProductButton>

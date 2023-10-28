@@ -33,7 +33,7 @@ const MiniDrawer = ({ children, menuItems }) => {
         >
           <Header />
         </Box>
-        <Box sx={{ flexGrow: 1, p: 5, pt: 2 }}>{children}</Box>
+        <Box sx={{ flexGrow: 1, p: "28px", pt: 2 }}>{children}</Box>
       </Box>
     </Box>
   );
