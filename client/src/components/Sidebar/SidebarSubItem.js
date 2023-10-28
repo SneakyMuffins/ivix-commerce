@@ -35,7 +35,7 @@ const SidebarSubItem = ({ open, subItem, currentLocation }) => {
         <ListItemText
           primary={subItem.label}
           primaryTypographyProps={{
-            color: isActive ? "primary" : "",
+            color: isActive ? "#0062FF" : "",
             fontWeight: 500,
             fontSize: "14px",
           }}

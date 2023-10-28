@@ -32,7 +32,7 @@ export const menuItems = [
   {
     section: "OTHER",
     items: [
-      { label: "Messages", icon: <MessageOutlinedIcon />, route: "/messages" },
+      { label: "Messages", icon: <MessageOutlinedIcon />, route: "/messages", indicator: "99+" },
       { label: "Library", icon: <LibraryBooksOutlinedIcon />, route: "/library" },
       { label: "Settings", icon: <SettingsOutlinedIcon />, route: "/settings" },
       { label: "Support", icon: <PhoneInTalkOutlinedIcon />, route: "/support" },

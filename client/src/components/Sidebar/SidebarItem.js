@@ -10,6 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import Chip from "@mui/material/Chip";
 
 import SidebarSubItem from "./SidebarSubItem";
 import { useHighlightMenuItem } from "../../hooks/useHighlightMenuItem";
@@ -47,7 +48,7 @@ const SidebarItem = ({ open, menuItem, currentLocation }) => {
                 minWidth: 0,
                 mr: open ? 3 : "auto",
                 justifyContent: "center",
-                color: isActive ? "primary.main" : "",
+                color: isActive ? "#0062FF" : "",
               }}
             >
               {menuItem.icon}
@@ -56,14 +57,21 @@ const SidebarItem = ({ open, menuItem, currentLocation }) => {
               primary={menuItem.label}
               sx={{ opacity: open ? 1 : 0 }}
               primaryTypographyProps={{
-                color: isActive ? "primary" : "",
+                color: isActive ? "#0062FF" : "",
                 fontWeight: 600,
                 fontSize: "14px",
               }}
             />
+            {open && menuItem.indicator && (
+              <Chip size="small" sx={{ bgcolor: "#FC5A5A", color: "white" }} label={menuItem.indicator} />
+            )}
             {menuItem.subItems &&
               open &&
-              (isSubItemsToggled ? <ExpandLess /> : <ExpandMore />)}
+              (isSubItemsToggled ? (
+                <ExpandLess color="action" />
+              ) : (
+                <ExpandMore color="action" />
+              ))}
           </ListItemButton>
         </Box>
         {menuItem.subItems && (

@@ -22,6 +22,10 @@ const Sidebar = ({ open, menuItems }) => {
               sx={{
                 visibility: open ? "inherit" : "hidden",
                 fontWeight: "bold",
+                paddingTop: "30px",
+                paddingBottom: "10px",
+                lineHeight: 0,
+                color: "#92929D"
               }}
             >
               {section.section}
