@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import IconButton from "@mui/material/IconButton";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -28,22 +28,34 @@ const ProductListOptions = ({ id, stock, onAddToBasket }) => {
         <MoreHorizIcon />
       </IconButton>
       <Menu
+        sx={{
+          "& .MuiMenu-paper": {
+            p: "0 8px",
+            backgroundColor: "#44444F",
+          },
+          "& .MuiMenu-paper .MuiList-root": {
+            display: "flex",
+            flexDirection: "column",
+            gap: "4px",
+            width: "200px",
+          },
+        }}
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={() => onAddToBasket(id)} disabled={stock === 0}>
-          <IconButton>
-            <AddShoppingCartIcon />
-          </IconButton>
-          Add to Cart
+        <MenuItem sx={{ p: 0, fontSize: "12px", color: "white" }}>
+          <StarBorderOutlinedIcon sx={{ pr: 1, color: "#92929D" }} />
+          Wishlist this Product
         </MenuItem>
-        <MenuItem>
-          <IconButton>
-            <FavoriteIcon />
-          </IconButton>
-          Add to Wishlist
+        <MenuItem
+          onClick={() => onAddToBasket(id)}
+          disabled={stock === 0}
+          sx={{ p: 0, fontSize: "12px", color: "white" }}
+        >
+          <AddOutlinedIcon sx={{ pr: 1, color: "#92929D" }} />
+          Add to Basket
         </MenuItem>
       </Menu>
     </div>
