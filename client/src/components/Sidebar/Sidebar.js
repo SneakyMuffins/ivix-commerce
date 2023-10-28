@@ -13,7 +13,7 @@ const Sidebar = ({ open, menuItems }) => {
 
   return (
     <Drawer variant="permanent" open={open}>
-      <Divider sx={{ pt: "69px" }} />
+      <Divider sx={{ pt: "71px" }} />
       <List>
         {menuItems.map((section) => (
           <React.Fragment key={section.section}>

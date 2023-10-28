@@ -14,18 +14,26 @@ const MiniDrawer = ({ children, menuItems }) => {
     setOpen(false);
   };
 
+  const headerStyle = open ? { marginLeft: "-1px" } : { marginLeft: 23 };
+
   return (
     <Box sx={{ display: "flex" }}>
       <Box onMouseEnter={handleDrawerOpen} onMouseLeave={handleDrawerClose}>
         <Sidebar open={open} menuItems={menuItems} />
       </Box>
       <Box component="main" sx={{ flexGrow: 1 }}>
-        <Box sx={{ flexGrow: 1, pl: 23 }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            transition: "margin 0.3s",
+            ...headerStyle,
+            zIndex: 1201,
+            position: "relative",
+          }}
+        >
           <Header />
         </Box>
-        <Box sx={{ flexGrow: 1, p: 5, pt: 2 }}>
-          {children}
-        </Box>
+        <Box sx={{ flexGrow: 1, p: 5, pt: 2 }}>{children}</Box>
       </Box>
     </Box>
   );
