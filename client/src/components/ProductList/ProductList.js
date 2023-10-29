@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
+import { API_BASE_URL } from "../../api/config";
 
 import ProductListActions from "./ProductListActions";
 import ProductListHeader from "./ProductListHeader";
@@ -38,17 +39,34 @@ const ProductList = ({ products }) => {
   );
 
   const columns = [
-    { field: "name", headerName: "Name" },
-    { field: "brand", headerName: "Brand" },
-    { field: "id", headerName: "ID" },
-    { field: "stock", headerName: "Stock" },
-    { field: "var", headerName: "Variant" },
-    { field: "price", headerName: "Price" },
+    {
+      field: "name",
+      headerName: "Name",
+      renderCell: (params) => (
+        <Box display="flex" alignItems="center">
+          <img
+            src={API_BASE_URL + params.row.imageUrl}
+            alt={params.row.name}
+            style={{
+              width: "48px",
+              height: "auto",
+              borderRadius: "5px",
+              marginRight: "17px",
+            }}
+          />
+          {params.value}
+        </Box>
+      ),
+    },
+    { field: "brand", headerName: "Brand", width: 150 },
+    { field: "id", headerName: "#ID", width: 150 },
+    { field: "stock", headerName: "Stock", width: 150 },
+    { field: "var", headerName: "Variant", width: 150 },
+    { field: "price", headerName: "Price", width: 75 },
     {
       field: "actions",
-      headerName: "Actions",
+      headerName: "",
       sortable: false,
-      width: 150,
       renderCell: renderActionsCell,
     },
   ];
@@ -82,11 +100,29 @@ const ProductList = ({ products }) => {
           rows={productData}
           columns={columns}
           checkboxSelection
-          hideFooterPagination
           sx={{
             border: "none",
             background: "white",
+            "& .MuiDataGrid-columnHeaders": {
+              bgcolor: "#FAFAFB",
+            },
+            "& .MuiDataGrid-withBorderColor": {
+              border: 0,
+            },
+            "& .MuiDataGrid-columnHeaderTitle": {
+              color: "#44444F",
+              fontWeight: "600",
+            },
           }}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 10 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          columnHeaderHeight={38}
+          disableColumnMenu
+          disableRowSelectionOnClick
         />
       )}
     </>
