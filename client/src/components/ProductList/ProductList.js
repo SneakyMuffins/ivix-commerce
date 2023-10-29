@@ -7,6 +7,7 @@ import ProductListHeader from "./ProductListHeader";
 import ProductListOptions from "./ProductListOptions";
 import DataGridHeader from "./DataGridHeader";
 import DataGrid from "./styled/DataGrid.styled";
+import DataGridFooter from "./DataGridFooter";
 
 import { API_BASE_URL } from "../../api/config";
 
@@ -108,17 +109,12 @@ const ProductList = ({ products }) => {
             rows={productData}
             columns={columns}
             checkboxSelection
-            initialState={{
-              pagination: {
-                paginationModel: { page: 0, pageSize: 10 },
-              },
-            }}
-            pageSizeOptions={[5, 10]}
             columnHeaderHeight={38}
             disableColumnMenu
             disableRowSelectionOnClick
             hideFooter
           />
+          <DataGridFooter />
         </Box>
       )}
     </>
