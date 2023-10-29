@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { API_BASE_URL } from "../../api/config";
 
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import InputAdornment from "@mui/material/InputAdornment";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
 import ProductListActions from "./ProductListActions";
 import ProductListHeader from "./ProductListHeader";
 import ProductListOptions from "./ProductListOptions";
@@ -96,34 +100,67 @@ const ProductList = ({ products }) => {
           <CircularProgress />
         </Box>
       ) : (
-        <DataGrid
-          rows={productData}
-          columns={columns}
-          checkboxSelection
-          sx={{
-            border: "none",
-            background: "white",
-            "& .MuiDataGrid-columnHeaders": {
-              bgcolor: "#FAFAFB",
-            },
-            "& .MuiDataGrid-withBorderColor": {
-              border: 0,
-            },
-            "& .MuiDataGrid-columnHeaderTitle": {
-              color: "#44444F",
-              fontWeight: "600",
-            },
-          }}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 10 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          columnHeaderHeight={38}
-          disableColumnMenu
-          disableRowSelectionOnClick
-        />
+        <Box
+          display="flex"
+          flexDirection={"column"}
+          sx={{ gap: "30px", background: "white", p: "20px 12px" }}
+        >
+          <Box display="flex" sx={{ gap: 4, alignItems: "center" }}>
+            <TextField
+              variant="outlined"
+              size="small"
+              fullWidth
+              label={
+                <Box display="flex" alignItems="center">
+                  <SearchOutlinedIcon fontSize="small" />
+                  <span style={{ marginLeft: "8px", fontSize: "14px" }}>
+                    Search by Name, Brand, Variant, etc…
+                  </span>
+                </Box>
+              }
+            />
+            <Autocomplete
+              disablePortal
+              id="action"
+              options={[{ label: "Action 1" }, { label: "Action 2" }]}
+              sx={{ fontSize: "14px", width: 110 }}
+              renderInput={(params) => (
+                <TextField {...params} size="small" label="Action" />
+              )}
+            />
+          </Box>
+          <DataGrid
+            rows={productData}
+            columns={columns}
+            checkboxSelection
+            sx={{
+              border: "none",
+              background: "white",
+              borderBottom: `1px solid #F1F1F5`,
+              borderRadius: 0,
+              "& .MuiDataGrid-columnHeaders": {
+                bgcolor: "#FAFAFB",
+              },
+              "& .MuiDataGrid-withBorderColor": {
+                border: 0,
+              },
+              "& .MuiDataGrid-columnHeaderTitle": {
+                color: "#44444F",
+                fontWeight: "600",
+              },
+            }}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 10 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+            columnHeaderHeight={38}
+            disableColumnMenu
+            disableRowSelectionOnClick
+            hideFooter
+          />
+        </Box>
       )}
     </>
   );
