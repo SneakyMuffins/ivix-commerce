@@ -7,7 +7,7 @@ const DataGrid = styled(SourceDataGrid)(({ theme }) => ({
   borderBottom: `1px solid #F1F1F5`,
   borderRadius: 0,
   "& .MuiDataGrid-columnHeaders": {
-    bgcolor: "#FAFAFB",
+    background: "#FAFAFB",
   },
   "& .MuiDataGrid-withBorderColor": {
     border: 0,
