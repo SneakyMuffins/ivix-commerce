@@ -63,7 +63,11 @@ const SidebarItem = ({ open, menuItem, currentLocation }) => {
               }}
             />
             {open && menuItem.indicator && (
-              <Chip size="small" sx={{ bgcolor: "#FC5A5A", color: "white" }} label={menuItem.indicator} />
+              <Chip
+                size="small"
+                sx={{ bgcolor: "#FC5A5A", color: "white" }}
+                label={menuItem.indicator}
+              />
             )}
             {menuItem.subItems &&
               open &&

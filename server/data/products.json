@@ -1,93 +1,92 @@
 [
-    {
-      "name": "Salvo Toge Bag Brown",
-      "brand": "Uniqlo",
-      "id": "132456",
-      "stock": 98,
-      "var": 2,
-      "price": 89.0,
-      "imageUrl": "/images/salvo-toge-bag-brown.png"
-    },
-    {
-      "name": "Flick Sling Bags Khaki",
-      "brand": "Visval",
-      "id": "299880",
-      "stock": 34,
-      "var": 4,
-      "price": 59.0,
-      "imageUrl": "/images/flick-sling-bags-khaki.png"
-    },
-    {
-      "name": "Spear Wallet Grey",
-      "brand": "DSVN",
-      "id": "788898",
-      "stock": 12,
-      "var": 5,
-      "price": 9.0,
-      "imageUrl": "/images/spear-wallet-grey.png"
-    },
-    {
-      "name": "Backpack Riddley Yellow",
-      "brand": "Marka ID",
-      "id": "099878",
-      "stock": 13,
-      "var": 1,
-      "price": 250.0,
-      "imageUrl": "/images/backpack-riddley-yellow.png"
-    },
-    {
-      "name": "Waist Bag Flashpack Navy",
-      "brand": "Marka ID",
-      "id": "099872",
-      "stock": 2,
-      "var": 4,
-      "price": 49.0,
-      "imageUrl": "/images/waist-bag-flashpack-navy.png"
-    },
-    {
-      "name": "Waist Bag Pacer Wicker Black",
-      "brand": "Uniqlo",
-      "id": "111209",
-      "stock": 98,
-      "var": 3,
-      "price": 39.0,
-      "imageUrl": "/images/waist-bag-pacer-wicker-black.png"
-    },
-    {
-      "name": "Cap Portray Maroon",
-      "brand": "Uniqlo",
-      "id": "122278",
-      "stock": 3,
-      "var": 3,
-      "price": 8.0,
-      "imageUrl": "/images/cap-portray-maroon.png"
-    },
-    {
-      "name": "Bucket Hat Nation",
-      "brand": "DSVN",
-      "id": "233455",
-      "stock": 0,
-      "var": 1,
-      "price": 9.0,
-      "imageUrl": "/images/bucket-hat-nation.png"
-    },
-    {
-      "name": "T-shirt Voyage",
-      "brand": "Uniqlo",
-      "id": "788780",
-      "stock": 0,
-      "var": 1,
-      "price": 10.0,
-      "imageUrl": "/images/t-shirt-voyage.png"
-    },
-    {
-      "name": "[COLLABS] Limited Visval X Skinnymonkey T-shirt",
-      "brand": "Visval",
-      "id": "009192",
-      "stock": 45,
-      "var": 1,
-      "price": 15.0,
-      "imageUrl": "/images/collabs-limited-visval-x-skinnymonkey-t-shirt.png"
-    }
-  ]
-  
+  {
+    "name": "Salvo Toge Bag Brown",
+    "brand": "Uniqlo",
+    "id": "132456",
+    "stock": 98,
+    "var": 2,
+    "price": 89.0,
+    "imageUrl": "/images/salvo-toge-bag-brown.png"
+  },
+  {
+    "name": "Flick Sling Bags Khaki",
+    "brand": "Visval",
+    "id": "299880",
+    "stock": 34,
+    "var": 4,
+    "price": 59.0,
+    "imageUrl": "/images/flick-sling-bags-khaki.png"
+  },
+  {
+    "name": "Spear Wallet Grey",
+    "brand": "DSVN",
+    "id": "788898",
+    "stock": 12,
+    "var": 5,
+    "price": 9.0,
+    "imageUrl": "/images/spear-wallet-grey.png"
+  },
+  {
+    "name": "Backpack Riddley Yellow",
+    "brand": "Marka ID",
+    "id": "099878",
+    "stock": 13,
+    "var": 1,
+    "price": 250.0,
+    "imageUrl": "/images/backpack-riddley-yellow.png"
+  },
+  {
+    "name": "Waist Bag Flashpack Navy",
+    "brand": "Marka ID",
+    "id": "099872",
+    "stock": 2,
+    "var": 4,
+    "price": 49.0,
+    "imageUrl": "/images/waist-bag-flashpack-navy.png"
+  },
+  {
+    "name": "Waist Bag Pacer Wicker Black",
+    "brand": "Uniqlo",
+    "id": "111209",
+    "stock": 98,
+    "var": 3,
+    "price": 39.0,
+    "imageUrl": "/images/waist-bag-pacer-wicker-black.png"
+  },
+  {
+    "name": "Cap Portray Maroon",
+    "brand": "Uniqlo",
+    "id": "122278",
+    "stock": 3,
+    "var": 3,
+    "price": 8.0,
+    "imageUrl": "/images/cap-portray-maroon.png"
+  },
+  {
+    "name": "Bucket Hat Nation",
+    "brand": "DSVN",
+    "id": "233455",
+    "stock": 0,
+    "var": 1,
+    "price": 9.0,
+    "imageUrl": "/images/bucket-hat-nation.png"
+  },
+  {
+    "name": "T-shirt Voyage",
+    "brand": "Uniqlo",
+    "id": "788780",
+    "stock": 0,
+    "var": 1,
+    "price": 10.0,
+    "imageUrl": "/images/t-shirt-voyage.png"
+  },
+  {
+    "name": "[COLLABS] Limited Visval X Skinnymonkey T-shirt",
+    "brand": "Visval",
+    "id": "009192",
+    "stock": 45,
+    "var": 1,
+    "price": 15.0,
+    "imageUrl": "/images/collabs-limited-visval-x-skinnymonkey-t-shirt.png"
+  }
+]

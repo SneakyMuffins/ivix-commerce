@@ -25,7 +25,7 @@ const Sidebar = ({ open, menuItems }) => {
                 paddingTop: "30px",
                 paddingBottom: "10px",
                 lineHeight: 0,
-                color: "#92929D"
+                color: "#92929D",
               }}
             >
               {section.section}

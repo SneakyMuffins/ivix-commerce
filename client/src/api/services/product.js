@@ -1,6 +1,6 @@
-import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import { GET_PRODUCTS } from '../queries/product';
-import { GRAPHQL_API_URL } from '../config';
+import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
+import { GET_PRODUCTS } from "../queries/product";
+import { GRAPHQL_API_URL } from "../config";
 
 const httpLink = createHttpLink({
   uri: GRAPHQL_API_URL,
