@@ -32,9 +32,15 @@ const ProductDataGrid = ({ productData, loading, setProductData }) => {
     {
       field: "name",
       headerName: "Name",
-      flex: 1,
+      width: 300,
       renderCell: (params) => (
-        <Box display="flex" alignItems="center">
+        <Box
+          display="flex"
+          alignItems="center"
+          style={{
+            color: params.row.stock === 0 ? "gray" : "inherit",
+          }}
+        >
           <img
             src={API_BASE_URL + params.row.imageUrl}
             alt={params.row.name}
